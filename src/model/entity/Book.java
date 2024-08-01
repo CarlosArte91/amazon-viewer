@@ -52,6 +52,19 @@ public class Book extends Publication implements IVisualizable {
         return state;
     }
 
+    public void view() {
+        setIsReaded(true);
+        Date dateI = startToSee(new Date());
+        stopToSee(dateI, new Date());
+
+        for (int i = 0;i < 1000; i++) {
+            System.out.println("...........................");
+        }
+
+        System.out.println("\nYou viewed: " + toString());
+        System.out.println("By: " + getTimeReaded() + "seconds");
+    }
+
     @Override
     public String toString() {
         String[] authors = getAuthors();

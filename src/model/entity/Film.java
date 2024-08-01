@@ -1,6 +1,6 @@
 package model.entity;
 
-public class Film {
+public abstract class Film {
     private String title;
     private String gener;
     private String creator;
@@ -70,4 +70,6 @@ public class Film {
         }
         return viewed;
     }
+
+    public abstract void view();
 }

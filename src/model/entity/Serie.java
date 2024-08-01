@@ -42,6 +42,9 @@ public class Serie extends Film {
                 "\nDuration: " + getDuration();
     }
 
+    @Override
+    public void view() {}
+
     public static ArrayList<Serie> makeList() {
         ArrayList<Serie> series = new ArrayList<>();
         Serie serie;

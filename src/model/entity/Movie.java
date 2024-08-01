@@ -48,6 +48,20 @@ public class Movie extends Film implements IVisualizable {
         }
     }
 
+    @Override
+    public void view() {
+        setIsViewed(true);
+        Date dateI = startToSee(new Date());
+        stopToSee(dateI, new Date());
+
+        for (int i = 0;i < 1000; i++) {
+            System.out.println("...........................");
+        }
+
+        System.out.println("\nYou viewed: " + toString());
+        System.out.println("By: " + getTimeViewed() + "seconds");
+    }
+
     public static ArrayList<Movie> makeList() {
         ArrayList<Movie> movies = new ArrayList<>();
 

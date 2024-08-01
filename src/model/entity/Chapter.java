@@ -53,6 +53,24 @@ public class Chapter extends Movie {
                 "\nDuration: " + getDuration();
     }
 
+    @Override
+    public void view() {
+        super.view();
+
+        ArrayList<Chapter> chapters = getSerie().getChapters();
+        int viewedCounter = 0;
+
+        for (Chapter chapter : chapters) {
+            if (chapter.getIsViewed()) {
+                viewedCounter++;
+            }
+        }
+
+        if (viewedCounter == chapters.size()) {
+            getSerie().setIsViewed(true);
+        }
+    }
+
     public static ArrayList<Chapter> makeList(Serie serie) {
         ArrayList<Chapter> chapters = new ArrayList<>();
         Chapter chapter;
