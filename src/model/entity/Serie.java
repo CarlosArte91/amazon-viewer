@@ -43,7 +43,9 @@ public class Serie extends Film {
     }
 
     @Override
-    public void view() {}
+    public void view() {
+        setIsViewed(true);
+    }
 
     public static ArrayList<Serie> makeList() {
         ArrayList<Serie> series = new ArrayList<>();
