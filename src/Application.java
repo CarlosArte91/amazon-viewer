@@ -3,6 +3,18 @@ import util.Input;
 
 import java.util.ArrayList;
 
+/**
+ * <h1>Amazon Viewer</h1>
+ * It is a program that allows you to watch movies and series with their respective episodes,
+ * as well as books and magazines. It also allows you to generate general and daily reports.
+ * <p></p>
+ * There are some rules, such as; All items can be watched or read except for magazines, as
+ * these can only be viewed.
+ *
+ * @author carlos_cruz
+ * @version 1.1
+ * @since 2024
+ */
 public class Application {
     public static ArrayList<Movie> movies = Movie.makeList();
     public static ArrayList<Serie> series = Serie.makeList();

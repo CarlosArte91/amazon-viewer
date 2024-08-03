@@ -1,5 +1,17 @@
 package model.entity;
 
+/**
+ * <h1>Film Class</h1>
+ * Film is an abstract parent class.
+ * <p></p>
+ * This class is the base class of the Films family. Since it is abstract, instances
+ * of it cannot be created. It contains the abstract method {@code view()} which
+ * must be implemented by all its subclasses.
+ *
+ * @author carlos_cruz
+ * @version 1.1
+ * @since 2024
+ */
 public abstract class Film {
     private String title;
     private String gener;
@@ -71,5 +83,8 @@ public abstract class Film {
         return viewed;
     }
 
+    /**
+     * {@code view()} Mandatory abstract method to implement.
+     */
     public abstract void view();
 }

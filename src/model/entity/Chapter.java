@@ -2,6 +2,10 @@ package model.entity;
 
 import java.util.ArrayList;
 
+/**
+ * It inherits from {@link Movie}
+ * @see Film
+ */
 public class Chapter extends Movie {
     private int id;
     private int sessionNumber;

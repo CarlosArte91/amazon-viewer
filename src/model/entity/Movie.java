@@ -3,6 +3,10 @@ package model.entity;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * It inherits from {@link Film}
+ * It implements {@link IVisualizable}
+ */
 public class Movie extends Film implements IVisualizable {
     private int id;
     private int timeViewed;
@@ -34,11 +38,17 @@ public class Movie extends Film implements IVisualizable {
                 "\nDuration: " + getDuration();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Date startToSee(Date dateI) {
         return dateI;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void stopToSee(Date dateI, Date dateF) {
         if (dateF.getTime() > dateI.getTime()) {
@@ -48,6 +58,9 @@ public class Movie extends Film implements IVisualizable {
         }
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void view() {
         setIsViewed(true);
