@@ -1,5 +1,7 @@
 package model.entity;
 
+import model.dao.MovieDao;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -7,9 +9,11 @@ import java.util.Date;
  * It inherits from {@link Film}
  * It implements {@link IVisualizable}
  */
-public class Movie extends Film implements IVisualizable {
+public class Movie extends Film implements IVisualizable, MovieDao {
     private int id;
     private int timeViewed;
+
+    public Movie() {}
 
     public Movie(String title, String gener, String creator, int duration, short year) {
         super(title, gener, creator, duration);
@@ -18,6 +22,10 @@ public class Movie extends Film implements IVisualizable {
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getTimeViewed() {
@@ -32,7 +40,7 @@ public class Movie extends Film implements IVisualizable {
     public String toString() {
         return "\n:: MOVIE ::" +
                 "\nTitle: " + getTitle() +
-                "\nGener: " + getGener() +
+                "\nGener: " + getGenre() +
                 "\nYear: " + getYear() +
                 "\nCreator: " + getCreator() +
                 "\nDuration: " + getDuration();
@@ -76,18 +84,7 @@ public class Movie extends Film implements IVisualizable {
     }
 
     public static ArrayList<Movie> makeList() {
-        ArrayList<Movie> movies = new ArrayList<>();
-
-        for (int i = 0; i < 5; i++) {
-            int item = i + 1;
-            movies.add(new Movie(
-                    "Movie " + item,
-                    "Gener " + item,
-                    "Creator " + item,
-                    120 + item,
-                    (short) (2017 + item)
-            ));
-        }
-        return movies;
+        Movie movie = new Movie();
+        return movie.read();
     }
 }

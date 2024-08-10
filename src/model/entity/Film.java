@@ -14,15 +14,17 @@ package model.entity;
  */
 public abstract class Film {
     private String title;
-    private String gener;
+    private String genre;
     private String creator;
     private int duration;
     private short year;
     private boolean isViewed;
 
-    public Film(String title, String gener, String creator, int duration) {
+    public Film() {}
+
+    public Film(String title, String genre, String creator, int duration) {
         this.title = title;
-        this.gener = gener;
+        this.genre = genre;
         this.creator = creator;
         this.duration = duration;
     }
@@ -35,12 +37,12 @@ public abstract class Film {
         this.title = title;
     }
 
-    public String getGener() {
-        return gener;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setGener(String gener) {
-        this.gener = gener;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     public String getCreator() {
