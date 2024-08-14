@@ -70,13 +70,15 @@ public class Application {
 
     public static void showMovies() {
         int exit = 1;
+        int item;
 
         do {
             System.out.println("\n:: MOVIES ::\n");
+            item = 1;
 
-            for (int i = 0; i < movies.size(); i++) {
-                Movie movie = movies.get(i);
-                System.out.println((i + 1) + ". " + movie.getTitle() + " Viewed: " + movie.getIsViewed());
+            for (Movie movie : movies) {
+                System.out.println(item + ". " + movie.getTitle() + " --> viewed: " + movie.getIsViewed());
+                item++;
             }
 
             System.out.println("0. Back to menu\n");
